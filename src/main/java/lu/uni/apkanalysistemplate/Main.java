@@ -74,7 +74,7 @@ public class Main {
 		List<String> dirs = new ArrayList<String>();
 		dirs.add(CommandLineOptions.v().getApk());
 		Options.v().set_process_dir(dirs);
-		Options.v().set_force_android_jar(CommandLineOptions.v().getPlatforms());
+		Options.v().set_android_jars(CommandLineOptions.v().getPlatforms());
 		Scene.v().loadNecessaryClasses();
 	}
 }
