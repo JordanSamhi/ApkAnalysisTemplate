@@ -71,10 +71,11 @@ public class Main {
 		Options.v().set_output_format(Options.output_format_none);
 		Options.v().set_src_prec(Options.src_prec_apk);
 		Options.v().set_whole_program(true);
+		Options.v().set_process_multiple_dex(true);
 		List<String> dirs = new ArrayList<String>();
 		dirs.add(CommandLineOptions.v().getApk());
 		Options.v().set_process_dir(dirs);
-		Options.v().set_force_android_jar(CommandLineOptions.v().getPlatforms());
+		Options.v().set_android_jars(CommandLineOptions.v().getPlatforms());
 		Scene.v().loadNecessaryClasses();
 	}
 }
